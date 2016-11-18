@@ -61,7 +61,7 @@ $(function() {
          * hiding/showing of the menu element.
          */
          it('is hidden by default', function() {
-           expect($('body').attr('class')).toBe('menu-hidden');
+           expect($('body').hasClass('menu-hidden')).toBe(true);
          });
 
          /* Write a test that ensures the menu changes
@@ -74,7 +74,7 @@ $(function() {
             menu.click();
             expect($('body').hasClass('menu-hidden')).toBe(false);
             menu.click();
-            expect($('body').attr('class')).toBe('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
           });
 
     });
